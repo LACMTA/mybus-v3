@@ -107,214 +107,218 @@ mode: 'one-page'
 				<img src="{{ '/img/articulated-buses.jpg' | url }}" alt="a photo of Metro buses">
 			</div>
 		</div>
+		
 		{% case mode %}
 			{% when 'one-page' %}
-			{% comment %} List of chiclet button links to each line update {%- endcomment %}
-			<div class="grid-row grid-gap" id="chiclet-links">
-				<div class="grid-col">
-					<div class="padding-x-2 desktop:padding-x-5">
-						<h2 style="margin-top-0">{{ pageContent.page.lineListTitle }}</h2>
+				{% if pageContent.lineList != null and pageContent.lineList.size != 0 %}
 
-						<div class="grid-row flex-row flex-wrap flex-gap">
-							{% for line in pageContent.lineList %}
-								<div class="chiclet-container">
-									<div class="chiclet-outer">
-										{% case line %}
-											{% when '801' %}
-												<a class="chiclet-inner a-line" href="#{{ 'line-' | append: line }}">A Line
-											{% when '802' %}
-												<a class="chiclet-inner b-line" href="#{{ 'line-' | append: line }}">B Line
-											{% when '803' %}
-												<a class="chiclet-inner c-line" href="#{{ 'line-' | append: line }}">C Line
-											{% when '804' %}
-												<a class="chiclet-inner e-line" href="#{{ 'line-' | append: line }}">E Line
-											{% when '805' %}
-												<a class="chiclet-inner d-line" href="#{{ 'line-' | append: line }}">D Line
-											{% when '807' %}
-												<a class="chiclet-inner k-line" href="#{{ 'line-' | append: line }}">K Line
-											{% when '857' %}
-												<a class="chiclet-inner c-k-line" href="#{{ 'line-' | append: line }}">C & K Line Link
-											{% when '910' %}
-												<a class="chiclet-inner bus-j-line" href="#{{ 'line-' | append: line }}">J Line (910)
-											{% when '950' %}
-												<a class="chiclet-inner bus-j-line" href="#{{ 'line-' | append: line }}">J Line (950)
-											{% when '901' %}
-												<a class="chiclet-inner bus-g-line" href="#{{ 'line-' | append: line }}">G Line
-											{% else %}
-												<a class="chiclet-inner bus-standard" href="#{{ 'line-' | append: line }}">{{ line }}
-										{% endcase %}											
-										</a>
+					{% comment %} List of chiclet button links to each line update {%- endcomment %}
+					<div class="grid-row grid-gap margin-bottom-5" id="chiclet-links">
+						<div class="grid-col">
+							<div class="padding-x-2 desktop:padding-x-5">
+								<h2 style="margin-top-0">{{ pageContent.page.lineListTitle }}</h2>
+
+								<div class="grid-row flex-row flex-wrap flex-gap">
+									{% for line in pageContent.lineList %}
+										<div class="chiclet-container">
+											<div class="chiclet-outer">
+												{% case line %}
+													{% when '801' %}
+														<a class="chiclet-inner a-line" href="#{{ 'line-' | append: line }}">A Line
+													{% when '802' %}
+														<a class="chiclet-inner b-line" href="#{{ 'line-' | append: line }}">B Line
+													{% when '803' %}
+														<a class="chiclet-inner c-line" href="#{{ 'line-' | append: line }}">C Line
+													{% when '804' %}
+														<a class="chiclet-inner e-line" href="#{{ 'line-' | append: line }}">E Line
+													{% when '805' %}
+														<a class="chiclet-inner d-line" href="#{{ 'line-' | append: line }}">D Line
+													{% when '807' %}
+														<a class="chiclet-inner k-line" href="#{{ 'line-' | append: line }}">K Line
+													{% when '857' %}
+														<a class="chiclet-inner c-k-line" href="#{{ 'line-' | append: line }}">C & K Line Link
+													{% when '910' %}
+														<a class="chiclet-inner bus-j-line" href="#{{ 'line-' | append: line }}">J Line (910)
+													{% when '950' %}
+														<a class="chiclet-inner bus-j-line" href="#{{ 'line-' | append: line }}">J Line (950)
+													{% when '901' %}
+														<a class="chiclet-inner bus-g-line" href="#{{ 'line-' | append: line }}">G Line
+													{% else %}
+														<a class="chiclet-inner bus-standard" href="#{{ 'line-' | append: line }}">{{ line }}
+												{% endcase %}											
+												</a>
+												
+											</div>
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{% for line in pageContent.lineList %}
+						{% assign lineUpdate = pageContent.updates[line] %}
+
+						<div class="grid-row flex-row flex-gap margin-bottom-5" id="{{ 'line-' | append: line }}">
+							{%- comment -%} This section shows the update descriptions for mobile views ONLY {%- endcomment -%}
+							<div class="margin-x-2 margin-top-5 grid-col line-change-info desktop:display-none">
+								<div class="grid-row padding-3 flex-column">
+									<div class="chiclet-container flex-auto">
+										<div class="chiclet-outer">
+											{% case line %}
+												{% when '801' %}
+													<span class="chiclet-inner a-line">A Line
+												{% when '802' %}
+													<span class="chiclet-inner b-line">B Line
+												{% when '803' %}
+													<span class="chiclet-inner c-line">C Line
+												{% when '804' %}
+													<span class="chiclet-inner e-line">E Line
+												{% when '805' %}
+													<span class="chiclet-inner d-line">D Line
+												{% when '807' %}
+													<span class="chiclet-inner k-line">K Line
+												{% when '857' %}
+													<span class="chiclet-inner c-k-line">C & K Line Link
+												{% when '910' %}
+													<span class="chiclet-inner bus-j-line">J Line (910)
+												{% when '950' %}
+													<span class="chiclet-inner bus-j-line">J Line (950)
+												{% when '901' %}
+													<span class="chiclet-inner bus-g-line">G Line
+												{% else %}
+													<span class="chiclet-inner bus-standard">{{ line }}
+											{% endcase %}
+											</span>
+										</div>
+									</div>
+									<div class="grid-col change-description">
+										<h2 class="line-description margin-top-2 margin-bottom-0">{{ lineUpdate.description }}
+											{% if lineUpdate.arterials != null %}
+												<br><small>via {{ lineUpdate.arterials }}</small>
+											{% endif %}
+										</h2>
+										{% if lineUpdate.schedule != null and lineUpdate.schedule != '' %}
+										<span class="schedule-link">
+											<a href="{{ '/files/schedules/' | append: lineUpdate.schedule | url }}" target="_blank">{{ pageContent.page.schedule }} 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+													<use xlink:href="{{ '/assets/uswds/img/sprite.svg#file_download' | url }}"></use>
+												</svg>
+											</a>
+										</span>
+										{% endif %}
 										
+										<div class="line-update">
+											{% if lineUpdate.update != '' %}
+												<strong>{{ pageContent.page.update }}</strong> {{ lineUpdate.update }}<br>
+											{% endif %}
+											
+											{% if lineUpdate.reason != '' %}
+												<strong>{{ pageContent.page.reason }}</strong> {{ lineUpdate.reason }}
+											{% endif %}
+
+											{% if lineUpdate.map != '' %}
+												<div class="map-accordion__heading">
+													<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="{{ 'map-' | append: line }}">
+														{{ pageContent.page.map }} 
+														<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+														<use xlink:href="{{ '/assets/uswds/img/sprite.svg#expand_more' | url }}"></use>
+														</svg>
+													</a>
+												</div>
+												<div class="{{ 'mobile-map-' | append: line }} map-accordion__content">
+													<img src="{{ '/files/maps/' | append: lineUpdate.map | url }}" alt="a graphic map showing a visual representation of the described changes to Line {{ line }}">
+												</div>
+											{% endif %}
+											
+										</div>
+										<div style="text-align: right;">
+											<a href="#chiclet-links">Back to top</a>
+										</div>
 									</div>
 								</div>
-							{% endfor %}
-						</div>
-					</div>
-				</div>
-			</div>
-
-			{% for line in pageContent.lineList %}
-				{% assign lineUpdate = pageContent.updates[line] %}
-
-				<div class="grid-row flex-row flex-gap" id="{{ 'line-' | append: line }}">
-					{%- comment -%} This section shows the update descriptions for mobile views ONLY {%- endcomment -%}
-					<div class="margin-x-2 margin-top-5 grid-col line-change-info desktop:display-none">
-						<div class="grid-row padding-3 flex-column">
-							<div class="chiclet-container flex-auto">
-								<div class="chiclet-outer">
-									{% case line %}
-										{% when '801' %}
-											<span class="chiclet-inner a-line">A Line
-										{% when '802' %}
-											<span class="chiclet-inner b-line">B Line
-										{% when '803' %}
-											<span class="chiclet-inner c-line">C Line
-										{% when '804' %}
-											<span class="chiclet-inner e-line">E Line
-										{% when '805' %}
-											<span class="chiclet-inner d-line">D Line
-										{% when '807' %}
-											<span class="chiclet-inner k-line">K Line
-										{% when '857' %}
-											<span class="chiclet-inner c-k-line">C & K Line Link
-										{% when '910' %}
-											<span class="chiclet-inner bus-j-line">J Line (910)
-										{% when '950' %}
-											<span class="chiclet-inner bus-j-line">J Line (950)
-										{% when '901' %}
-											<span class="chiclet-inner bus-g-line">G Line
-										{% else %}
-											<span class="chiclet-inner bus-standard">{{ line }}
-									{% endcase %}
-									</span>
-								</div>
 							</div>
-							<div class="grid-col change-description">
-								<h2 class="line-description margin-top-2 margin-bottom-0">{{ lineUpdate.description }}
-									{% if lineUpdate.arterials != null %}
-										<br><small>via {{ lineUpdate.arterials }}</small>
-									{% endif %}
-								</h2>
-								{% if lineUpdate.schedule != null and lineUpdate.schedule != '' %}
-								<span class="schedule-link">
-									<a href="{{ '/files/schedules/' | append: lineUpdate.schedule | url }}" target="_blank">{{ pageContent.page.schedule }} 
-										<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-											<use xlink:href="{{ '/assets/uswds/img/sprite.svg#file_download' | url }}"></use>
-										</svg>
-									</a>
-								</span>
-								{% endif %}
-								
-								<div class="line-update">
-									{% if lineUpdate.update != '' %}
-										<strong>{{ pageContent.page.update }}</strong> {{ lineUpdate.update }}<br>
-									{% endif %}
-									
-									{% if lineUpdate.reason != '' %}
-										<strong>{{ pageContent.page.reason }}</strong> {{ lineUpdate.reason }}
-									{% endif %}
 
-									{% if lineUpdate.map != '' %}
-										<div class="map-accordion__heading">
-											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="{{ 'map-' | append: line }}">
-												{{ pageContent.page.map }} 
+							{%- comment -%} This section shows the update descriptions for desktop views ONLY {%- endcomment -%}
+							<div class="margin-x-2 margin-top-5 grid-col line-change-info display-none desktop:display-block">
+								<div class="grid-row padding-3 flex-row">
+									<div class="chiclet-container flex-auto">
+										<div class="chiclet-outer">
+											{% case line %}
+												{% when '801' %}
+													<span class="chiclet-inner a-line">A Line
+												{% when '802' %}
+													<span class="chiclet-inner b-line">B Line
+												{% when '803' %}
+													<span class="chiclet-inner c-line">C Line
+												{% when '804' %}
+													<span class="chiclet-inner e-line">E Line
+												{% when '805' %}
+													<span class="chiclet-inner d-line">D Line
+												{% when '807' %}
+													<span class="chiclet-inner k-line">K Line
+												{% when '857' %}
+													<span class="chiclet-inner c-k-line">C & K Line Link
+												{% when '910' %}
+													<span class="chiclet-inner bus-j-line">J Line (910)
+												{% when '950' %}
+													<span class="chiclet-inner bus-j-line">J Line (950)
+												{% when '901' %}
+													<span class="chiclet-inner bus-g-line">G Line
+												{% else %}
+													<span class="chiclet-inner bus-standard">{{ line }}
+											{% endcase %}
+											</span>
+										</div>
+									</div>
+									<div class="grid-col change-description margin-left-2">
+										<h2 class="line-description margin-y-0">{{ lineUpdate.description }} 
+											{% if lineUpdate.arterials != null %}
+												<small>via {{ lineUpdate.arterials  }}</small>
+											{% endif %}
+										</h2>
+										{% if lineUpdate.schedule != null and lineUpdate.schedule != '' %}
+										<span class="schedule-link">
+											<a href="{{ '/files/schedules/' | append: lineUpdate.schedule | url }}" target="_blank">{{ pageContent.page.schedule }} 
 												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-												<use xlink:href="{{ '/assets/uswds/img/sprite.svg#expand_more' | url }}"></use>
+													<use xlink:href="{{ '/assets/uswds/img/sprite.svg#file_download' | url }}"></use>
 												</svg>
 											</a>
+										</span>
+										{% endif %}
+										
+										<div class="line-update">
+											{% if lineUpdate.update != '' %}
+												<strong>{{ pageContent.page.update }}</strong> {{ lineUpdate.update }}<br>
+											{% endif %}
+
+											{% if lineUpdate.reason != '' %}
+												<strong>{{ pageContent.page.reason }}</strong> {{ lineUpdate.reason }}
+											{% endif %}
+											
+											{% if lineUpdate.map != '' %}
+												<div class="map-accordion__heading">
+													<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="{{ 'map-' | append: line }}">
+														{{ pageContent.page.map }} 
+														<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+														<use xlink:href="{{ '/assets/uswds/img/sprite.svg#expand_more' | url }}"></use>
+														</svg>
+													</a>
+												</div>
+												<div class="{{ 'map-' | append: line }} map-accordion__content">
+													<img src="{{ '/files/maps/' | append: lineUpdate.map | url }}" alt="a graphic map showing a visual representation of the described changes to Line {{ line }}">
+												</div>
+											{% endif %}
 										</div>
-										<div class="{{ 'mobile-map-' | append: line }} map-accordion__content">
-											<img src="{{ '/files/maps/' | append: lineUpdate.map | url }}" alt="a graphic map showing a visual representation of the described changes to Line {{ line }}">
+										<div style="text-align: right;">
+											<a href="#chiclet-links">{{ pageContent.page.top }}</a>
 										</div>
-									{% endif %}
-									
-								</div>
-								<div style="text-align: right;">
-									<a href="#chiclet-links">Back to top</a>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-
-					{%- comment -%} This section shows the update descriptions for desktop views ONLY {%- endcomment -%}
-					<div class="margin-x-2 margin-top-5 grid-col line-change-info display-none desktop:display-block">
-						<div class="grid-row padding-3 flex-row">
-							<div class="chiclet-container flex-auto">
-								<div class="chiclet-outer">
-									{% case line %}
-										{% when '801' %}
-											<span class="chiclet-inner a-line">A Line
-										{% when '802' %}
-											<span class="chiclet-inner b-line">B Line
-										{% when '803' %}
-											<span class="chiclet-inner c-line">C Line
-										{% when '804' %}
-											<span class="chiclet-inner e-line">E Line
-										{% when '805' %}
-											<span class="chiclet-inner d-line">D Line
-										{% when '807' %}
-											<span class="chiclet-inner k-line">K Line
-										{% when '857' %}
-											<span class="chiclet-inner c-k-line">C & K Line Link
-										{% when '910' %}
-											<span class="chiclet-inner bus-j-line">J Line (910)
-										{% when '950' %}
-											<span class="chiclet-inner bus-j-line">J Line (950)
-										{% when '901' %}
-											<span class="chiclet-inner bus-g-line">G Line
-										{% else %}
-											<span class="chiclet-inner bus-standard">{{ line }}
-									{% endcase %}
-									</span>
-								</div>
-							</div>
-							<div class="grid-col change-description margin-left-2">
-								<h2 class="line-description margin-y-0">{{ lineUpdate.description }} 
-									{% if lineUpdate.arterials != null %}
-										<small>via {{ lineUpdate.arterials  }}</small>
-									{% endif %}
-								</h2>
-								{% if lineUpdate.schedule != null and lineUpdate.schedule != '' %}
-								<span class="schedule-link">
-									<a href="{{ '/files/schedules/' | append: lineUpdate.schedule | url }}" target="_blank">{{ pageContent.page.schedule }} 
-										<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-											<use xlink:href="{{ '/assets/uswds/img/sprite.svg#file_download' | url }}"></use>
-										</svg>
-									</a>
-								</span>
-								{% endif %}
-								
-								<div class="line-update">
-									{% if lineUpdate.update != '' %}
-										<strong>{{ pageContent.page.update }}</strong> {{ lineUpdate.update }}<br>
-									{% endif %}
-
-									{% if lineUpdate.reason != '' %}
-										<strong>{{ pageContent.page.reason }}</strong> {{ lineUpdate.reason }}
-									{% endif %}
-									
-									{% if lineUpdate.map != '' %}
-										<div class="map-accordion__heading">
-											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="{{ 'map-' | append: line }}">
-												{{ pageContent.page.map }} 
-												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-												<use xlink:href="{{ '/assets/uswds/img/sprite.svg#expand_more' | url }}"></use>
-												</svg>
-											</a>
-										</div>
-										<div class="{{ 'map-' | append: line }} map-accordion__content">
-											<img src="{{ '/files/maps/' | append: lineUpdate.map | url }}" alt="a graphic map showing a visual representation of the described changes to Line {{ line }}">
-										</div>
-									{% endif %}
-								</div>
-								<div style="text-align: right;">
-									<a href="#chiclet-links">{{ pageContent.page.top }}</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			{% endfor %}
+					{% endfor %}
+				{% endif %}
 
 		{% endcase %}
 	</div>

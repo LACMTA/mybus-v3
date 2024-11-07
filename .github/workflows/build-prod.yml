@@ -5,11 +5,9 @@
 # It will copy the CNAME file to the docs/ folder if necessary, then it will commit and push
 # these changes back to the repository.
 
-name: Build 11ty site for Production
+name: Build for Production
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:

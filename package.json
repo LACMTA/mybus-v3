@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "rename": "node rename.js",
-    "fetch:data-updates": "curl -fsSL -o src/_data/2024-06/updates.csv https://docs.google.com/spreadsheets/d/1KlCaGt2jtA_hHfF8klT_cc0AmXfJdD_fNd7I4zZD8E4/export?format=csv&usp=sharing&gid=0",
-    "fetch:data-content": "curl -fsSL -o src/_data/2024-06/content.csv https://docs.google.com/spreadsheets/d/1ypHpxlu18zoAtHaSwvz0cMW_tbTuqfaZPDARXpyUVZU/export?format=csv&usp=sharing&gid=2067994077",
+    "fetch:data-updates": "curl -fsSL -o src/_data/2024-06/updates.csv https://docs.google.com/spreadsheets/d/1xD8wgDgACo2Ztklkku5GqBJT3Y6HP1iRPcRHPJxeJF4/export?format=csv&usp=sharing&gid=0",
+    "fetch:data-content": "curl -fsSL -o src/_data/2024-06/content.csv https://docs.google.com/spreadsheets/d/1FU6snTI6OiSzsLhcHzUGYGxZLs7UievI8jE_EFqdxLo/export?format=csv&usp=sharing&gid=2067994077",
     "fetch:data-lines-bus": "curl -fsSL -o src/_data/2024-06/lines-bus.json https://api.metro.net/LACMTA/route_overview",
     "fetch:data-lines-rail": "curl -fsSL -o src/_data/2024-06/lines-rail.json https://api.metro.net/LACMTA_Rail/route_overview",
     "fetch:data": "npm run fetch:data-updates && npm run fetch:data-content && npm run fetch:data-lines-bus && npm run fetch:data-lines-rail",
