@@ -29,11 +29,12 @@ takeone_label_ko,한국어 (Korean),한국어 (Korean),한국어 (Korean),한국
 takeone_label_ja,日本語 (Japanese),日本語 (Japanese),日本語 (Japanese),日本語 (Japanese),日本語 (Japanese),日本語 (Japanese),日本語 (Japanese),日本語 (Japanese)
 takeone_label_ru,русский (Russian),русский (Russian),русский (Russian),русский (Russian),русский (Russian),русский (Russian),русский (Russian),русский (Russian)
 takeone_label_vi,Tiếng Việt (Vietnamese),Tiếng Việt (Vietnamese),Tiếng Việt (Vietnamese),Tiếng Việt (Vietnamese),Tiếng Việt (Vietnamese),Tiếng Việt (Vietnamese),Tiếng Việt (Vietnamese),Tiếng Việt (Vietnamese)
-takeone_file_en,,,,,,,,
-takeone_file_es,,,,,,,,
-takeone_file_hy,,,,,,,,
-takeone_file_zh-tw,,,,,,,,
-takeone_file_ko,,,,,,,,
-takeone_file_ja,,,,,,,,
-takeone_file_ru,,,,,,,,
-takeone_file_vi,,,,,,,,
+takeone_file_en,December_Service_Change_English.pdf,December_Service_Change_English.pdf,December_Service_Change_English.pdf,December_Service_Change_English.pdf,December_Service_Change_English.pdf,December_Service_Change_English.pdf,December_Service_Change_English.pdf,December_Service_Change_English.pdf
+takeone_file_es,December_Service_Change_Spanish.pdf,December_Service_Change_Spanish.pdf,December_Service_Change_Spanish.pdf,December_Service_Change_Spanish.pdf,December_Service_Change_Spanish.pdf,December_Service_Change_Spanish.pdf,December_Service_Change_Spanish.pdf,December_Service_Change_Spanish.pdf
+takeone_file_hy,December_Service_Change_Armenian.pdf,December_Service_Change_Armenian.pdf,December_Service_Change_Armenian.pdf,December_Service_Change_Armenian.pdf,December_Service_Change_Armenian.pdf,December_Service_Change_Armenian.pdf,December_Service_Change_Armenian.pdf,December_Service_Change_Armenian.pdf
+takeone_file_zh-tw,December_Service_Change_Chinese.pdf,December_Service_Change_Chinese.pdf,December_Service_Change_Chinese.pdf,December_Service_Change_Chinese.pdf,December_Service_Change_Chinese.pdf,December_Service_Change_Chinese.pdf,December_Service_Change_Chinese.pdf,December_Service_Change_Chinese.pdf
+takeone_file_ko,December_Service_Change_Korean.pdf,December_Service_Change_Korean.pdf,December_Service_Change_Korean.pdf,December_Service_Change_Korean.pdf,December_Service_Change_Korean.pdf,December_Service_Change_Korean.pdf,December_Service_Change_Korean.pdf,December_Service_Change_Korean.pdf
+takeone_file_ja,"December_Service_Change_Japanese.pdf
+",December_Service_Change_Japanese.pdf,December_Service_Change_Japanese.pdf,December_Service_Change_Japanese.pdf,December_Service_Change_Japanese.pdf,December_Service_Change_Japanese.pdf,December_Service_Change_Japanese.pdf,December_Service_Change_Japanese.pdf
+takeone_file_ru,December_Service_Change_Russian.pdf,December_Service_Change_Russian.pdf,December_Service_Change_Russian.pdf,December_Service_Change_Russian.pdf,December_Service_Change_Russian.pdf,December_Service_Change_Russian.pdf,December_Service_Change_Russian.pdf,December_Service_Change_Russian.pdf
+takeone_file_vi,December_Service_Change_Vietnamese.pdf,December_Service_Change_Vietnamese.pdf,December_Service_Change_Vietnamese.pdf,December_Service_Change_Vietnamese.pdf,December_Service_Change_Vietnamese.pdf,December_Service_Change_Vietnamese.pdf,December_Service_Change_Vietnamese.pdf,December_Service_Change_Vietnamese.pdf
