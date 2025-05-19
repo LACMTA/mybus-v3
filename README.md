@@ -4,6 +4,10 @@ The MyBus site was re-implemented using [`LACMTA/11ty-web-template`](https://git
 
 ## Content Updates
 
+Start from the latest `dev` branch of the `mybus-v3` repository.
+
+Fork a branch `month-yy-shakeup`.
+
 Duplicate the two spreadsheets that are used to populate content.
 
 Update share settings so anyone on the web can view.
@@ -32,6 +36,20 @@ npm run parse:data
 ```
 
 New `XX-content.json` files for each target language will be created in the `data/` folder.
+
+Build and serve locally:
+
+```
+npm run local:serve
+```
+
+Commit changes and push to the `dev` remote repository located at ` https://github.com/LACMTA/mybus-v3-dev`.
+
+Update the repository's default branch to point to this new branch.
+
+Update the repository's Pages settings to point to this new branch.
+
+Manually run the __Build 11ty site for Dev__ workflow.
 
 ## Quickstart
 

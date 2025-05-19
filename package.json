@@ -15,7 +15,6 @@
     "build": "npx @11ty/eleventy",
     "clean:build": "npm run clean && npm run fetch:data && npm run parse:data && npm run build",
     "serve": "npx @11ty/eleventy --serve",
-    "process-data": "python3 process-data.py && node process-data.js",
     "parse:data": "node process-data.js",
     "clean:serve": "npm run clean:build && npm run serve",
     "local:serve": "NODE_ENV=localhost npm run clean:serve",
