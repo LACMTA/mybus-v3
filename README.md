@@ -2,6 +2,37 @@
 
 The MyBus site was re-implemented using [`LACMTA/11ty-web-template`](https://github.com/LACMTA/11ty-web-template).
 
+## Content Updates
+
+Duplicate the two spreadsheets that are used to populate content.
+
+Update share settings so anyone on the web can view.
+
+Publish the first sheet to the web as a CSV file.
+
+Update the URL used in `package.json` with the sheet's ID (referenced from the URL for editing the sheet, not the one used for publishing to the web):
+
+```
+https://docs.google.com/spreadsheets/d/{ sheet_id }/export?format=csv&usp=sharing&gid=0
+```
+
+Create a new folder in `_data` for the new data files and update the file output paths in `package.json`:
+
+```
+src/_data/{ yyyy-mm}/updates.csv
+```
+
+Update some of the rows in the content sheet.
+
+Download the remote csv files using curl commands and run the data parsing scripts on them to turn them into json data:
+
+```
+npm run fetch:data
+npm run parse:data
+```
+
+New `XX-content.json` files for each target language will be created in the `data/` folder.
+
 ## Quickstart
 
 ### Install
@@ -88,14 +119,6 @@ Props to [@scriptex for this Gist](https://gist.github.com/scriptex/20536d8cda36
 
 ❗❗❗ TODO: [populate the `_data/allChanges.json` file with these file names.](https://github.com/LACMTA/mybus-v2/issues/3)
 
-### Landing Page
-
-The content on the landing page changes periodically.  The options have been separated into their own `include` files inside the `_includes/index/` folder:
-
-- Between Shakeups we use `_includes/index/email-signup.liquid` to display the email signup form.  
-- During shakeups we use one of these two options, depending on how complex the changes are:
-  - We use `_includes/index/all-changes.liquid` if the changes are not extensive and we decide to only link to the "All Changes" page.
-  - We use `_includes/index/select-line.liquid` if there are lots of extensive changes and we want to give the visitors line/stop-specific information.
 
 ## Using 11ty
 
