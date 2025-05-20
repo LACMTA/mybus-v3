@@ -15,7 +15,7 @@
 <meta property="og:title" content="LA Metro - Is my bus line changing?">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mybus.metro.net">
-<meta property="og:image" content="https://lacmta.github.io/mybus-v3-dev/img/articulated-buses.jpg">
+<meta property="og:image" content="http://localhost:8080/img/articulated-buses.jpg">
 <meta property="og:description" content="Find out whether upcoming service changes will be affecting your bus line.">
 
  <!-- Twitter Meta Tags -->
@@ -24,28 +24,28 @@
  <meta property="twitter:url" content="https://mybus.metro.net">
  <meta name="twitter:title" content="LA Metro - Is my bus line changing?">
  <meta name="twitter:description" content="Find out whether upcoming service changes will be affecting your bus line.">
- <meta name="twitter:image" content="https://lacmta.github.io/mybus-v3-dev/img/articulated-buses.jpg"><link rel="preconnect" href="https://fonts.gstatic.com">
+ <meta name="twitter:image" content="http://localhost:8080/img/articulated-buses.jpg"><link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/mybus-v3-dev/assets/uswds/css/styles.css">
-<script src="/mybus-v3-dev/assets/uswds/js/uswds-init.min.js"></script>
+<link rel="stylesheet" href="/assets/uswds/css/styles.css">
+<script src="/assets/uswds/js/uswds-init.min.js"></script>
 
 
-  <link rel="stylesheet" href="/mybus-v3-dev/css/site.css">
+  <link rel="stylesheet" href="/css/site.css">
 
-  <link rel="stylesheet" href="/mybus-v3-dev/css/index.css">
+  <link rel="stylesheet" href="/css/index.css">
 
-  <link rel="stylesheet" href="/mybus-v3-dev/css/common.css">
-
-
+  <link rel="stylesheet" href="/css/common.css">
 
 
-  <script src="/mybus-v3-dev/js/site.js"></script>
 
 
-<!-- <link href="/mybus-v3-dev/css/common.css" rel="stylesheet">
-<link href="/mybus-v3-dev/css/index.css" rel="stylesheet">
-<link href="/mybus-v3-dev/css/activecampaign.css" rel="stylesheet"> -->
+  <script src="/js/site.js"></script>
+
+
+<!-- <link href="/css/common.css" rel="stylesheet">
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/activecampaign.css" rel="stylesheet"> -->
 <!-- <script src="https://lacmta.github.io/design-system/dist/js/uswds-init.min.js"></script> -->
 
 <title>Is my bus line changing?
@@ -111,11 +111,109 @@
 	<div class="nav-container">
 		<div class="navbar">
 			<div class="logo" id="-logo">
-				<img src="/mybus-v3-dev/img/metro_logo_white.svg" role="img"
+				<img src="/img/metro_logo_white.svg" role="img"
 						alt="Metro logo" />
 			</div>
 		</div>
 
+		<!-- Temporarily limiting translation dropdown to English and Spanish -->
+		
+
+			<div class="usa-language-container usa-language--small">
+				<ul class="usa-language__primary usa-accordion">
+					<li class="usa-language__primary-item">
+						<button class="usa-button usa-language__link" role="button" aria-expanded="false"
+							aria-controls="language-options">
+							Translate
+						</button>
+						
+						<ul id="language-options" class="usa-language__submenu" hidden="true">
+							
+							
+
+								<!-- Temporarily limiting translation dropdown to English and Spanish -->
+								
+								
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+
+								
+
+							
+
+								<!-- Temporarily limiting translation dropdown to English and Spanish -->
+								
+								
+									
+										
+										<li class="usa-language__submenu-item">
+										<a href="/es/" class="lang-selector lang-es"><span>Español (Spanish)</span></a>
+										</li>
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+
+								
+
+							
+
+								<!-- Temporarily limiting translation dropdown to English and Spanish -->
+								
+
+							
+
+								<!-- Temporarily limiting translation dropdown to English and Spanish -->
+								
+
+							
+
+								<!-- Temporarily limiting translation dropdown to English and Spanish -->
+								
+
+							
+
+								<!-- Temporarily limiting translation dropdown to English and Spanish -->
+								
+
+							
+
+								<!-- Temporarily limiting translation dropdown to English and Spanish -->
+								
+
+							
+
+								<!-- Temporarily limiting translation dropdown to English and Spanish -->
+								
+
+							
+						</ul>
+					</li>
+				</ul>
+			</div>
 		
 	</div>
 </header>
@@ -201,7 +299,7 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 				</div>
 			</div>
 			<div class="desktop:grid-col-7 main-image">
-				<img src="/mybus-v3-dev/img/articulated-buses.jpg" alt="a photo of Metro buses">
+				<img src="/img/articulated-buses.jpg" alt="a photo of Metro buses">
 			</div>
 		</div>
 		
@@ -319,6 +417,18 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 									
 
 									
+										<div class="map-accordion__heading">
+											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="map-40">
+												See Map 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+												<use xlink:href="/assets/uswds/img/sprite.svg#expand_more"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="mobile-map-40 map-accordion__content">
+											<img src="/files/maps/40_117_LAXMTC.png" alt="a graphic map showing a visual representation of the described changes to Line 40">
+										</div>
+									
 									
 								</div>
 								<div style="text-align: right;">
@@ -353,6 +463,18 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 										<strong>Reason:</strong> To connect to the new LAX/Metro Transit Center Station
 									
 									
+									
+										<div class="map-accordion__heading">
+											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="map-40">
+												See Map 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+												<use xlink:href="/assets/uswds/img/sprite.svg#expand_more"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="map-40 map-accordion__content">
+											<img src="/files/maps/40_117_LAXMTC.png" alt="a graphic map showing a visual representation of the described changes to Line 40">
+										</div>
 									
 								</div>
 								<div style="text-align: right;">
@@ -393,6 +515,18 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 									
 
 									
+										<div class="map-accordion__heading">
+											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="map-102">
+												See Map 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+												<use xlink:href="/assets/uswds/img/sprite.svg#expand_more"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="mobile-map-102 map-accordion__content">
+											<img src="/files/maps/102_LAXMTC.png" alt="a graphic map showing a visual representation of the described changes to Line 102">
+										</div>
+									
 									
 								</div>
 								<div style="text-align: right;">
@@ -427,6 +561,18 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 										<strong>Reason:</strong> To connect to the new LAX/Metro Transit Center Station
 									
 									
+									
+										<div class="map-accordion__heading">
+											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="map-102">
+												See Map 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+												<use xlink:href="/assets/uswds/img/sprite.svg#expand_more"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="map-102 map-accordion__content">
+											<img src="/files/maps/102_LAXMTC.png" alt="a graphic map showing a visual representation of the described changes to Line 102">
+										</div>
 									
 								</div>
 								<div style="text-align: right;">
@@ -467,6 +613,18 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 									
 
 									
+										<div class="map-accordion__heading">
+											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="map-111">
+												See Map 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+												<use xlink:href="/assets/uswds/img/sprite.svg#expand_more"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="mobile-map-111 map-accordion__content">
+											<img src="/files/maps/111_LAXMTC.png" alt="a graphic map showing a visual representation of the described changes to Line 111">
+										</div>
+									
 									
 								</div>
 								<div style="text-align: right;">
@@ -501,6 +659,18 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 										<strong>Reason:</strong> To connect to the new LAX/Metro Transit Center Station
 									
 									
+									
+										<div class="map-accordion__heading">
+											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="map-111">
+												See Map 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+												<use xlink:href="/assets/uswds/img/sprite.svg#expand_more"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="map-111 map-accordion__content">
+											<img src="/files/maps/111_LAXMTC.png" alt="a graphic map showing a visual representation of the described changes to Line 111">
+										</div>
 									
 								</div>
 								<div style="text-align: right;">
@@ -541,6 +711,18 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 									
 
 									
+										<div class="map-accordion__heading">
+											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="map-117">
+												See Map 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+												<use xlink:href="/assets/uswds/img/sprite.svg#expand_more"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="mobile-map-117 map-accordion__content">
+											<img src="/files/maps/40_117_LAXMTC.png" alt="a graphic map showing a visual representation of the described changes to Line 117">
+										</div>
+									
 									
 								</div>
 								<div style="text-align: right;">
@@ -575,6 +757,18 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 										<strong>Reason:</strong> To connect to the new LAX/Metro Transit Center Station
 									
 									
+									
+										<div class="map-accordion__heading">
+											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="map-117">
+												See Map 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+												<use xlink:href="/assets/uswds/img/sprite.svg#expand_more"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="map-117 map-accordion__content">
+											<img src="/files/maps/40_117_LAXMTC.png" alt="a graphic map showing a visual representation of the described changes to Line 117">
+										</div>
 									
 								</div>
 								<div style="text-align: right;">
@@ -615,6 +809,18 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 									
 
 									
+										<div class="map-accordion__heading">
+											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="map-120">
+												See Map 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+												<use xlink:href="/assets/uswds/img/sprite.svg#expand_more"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="mobile-map-120 map-accordion__content">
+											<img src="/files/maps/120_LAXMTC.png" alt="a graphic map showing a visual representation of the described changes to Line 120">
+										</div>
+									
 									
 								</div>
 								<div style="text-align: right;">
@@ -649,6 +855,18 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 										<strong>Reason:</strong> To connect to the new LAX/Metro Transit Center Station
 									
 									
+									
+										<div class="map-accordion__heading">
+											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="map-120">
+												See Map 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+												<use xlink:href="/assets/uswds/img/sprite.svg#expand_more"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="map-120 map-accordion__content">
+											<img src="/files/maps/120_LAXMTC.png" alt="a graphic map showing a visual representation of the described changes to Line 120">
+										</div>
 									
 								</div>
 								<div style="text-align: right;">
@@ -689,6 +907,18 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 									
 
 									
+										<div class="map-accordion__heading">
+											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="map-232">
+												See Map 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+												<use xlink:href="/assets/uswds/img/sprite.svg#expand_more"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="mobile-map-232 map-accordion__content">
+											<img src="/files/maps/232_LAXMTC.png" alt="a graphic map showing a visual representation of the described changes to Line 232">
+										</div>
+									
 									
 								</div>
 								<div style="text-align: right;">
@@ -723,6 +953,18 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 										<strong>Reason:</strong> To connect to the new LAX/Metro Transit Center Station
 									
 									
+									
+										<div class="map-accordion__heading">
+											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="map-232">
+												See Map 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+												<use xlink:href="/assets/uswds/img/sprite.svg#expand_more"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="map-232 map-accordion__content">
+											<img src="/files/maps/232_LAXMTC.png" alt="a graphic map showing a visual representation of the described changes to Line 232">
+										</div>
 									
 								</div>
 								<div style="text-align: right;">
@@ -761,6 +1003,18 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 									
 
 									
+										<div class="map-accordion__heading">
+											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="map-857">
+												See Map 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+												<use xlink:href="/assets/uswds/img/sprite.svg#expand_more"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="mobile-map-857 map-accordion__content">
+											<img src="/files/maps/857_LAXMTC.png" alt="a graphic map showing a visual representation of the described changes to Line 857">
+										</div>
+									
 									
 								</div>
 								<div style="text-align: right;">
@@ -794,6 +1048,18 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
 									
 									
 									
+										<div class="map-accordion__heading">
+											<button type="button" class="map-accordion__button" aria-expanded="false" aria-controls="map-857">
+												See Map 
+												<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+												<use xlink:href="/assets/uswds/img/sprite.svg#expand_more"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="map-857 map-accordion__content">
+											<img src="/files/maps/857_LAXMTC.png" alt="a graphic map showing a visual representation of the described changes to Line 857">
+										</div>
+									
 								</div>
 								<div style="text-align: right;">
 									<a href="#chiclet-links">Back to top</a>
@@ -817,7 +1083,7 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
         <div class="grid-row grid-gap">
           <div class="usa-footer__logo grid-row tablet:grid-col-5 tablet:grid-gap-2">
             <div class="grid-col-4 tablet:grid-col-12">
-              <img src="/mybus-v3-dev/img/metro_logo_white.svg" role="img"
+              <img src="/img/metro_logo_white.svg" role="img"
 						alt="Metro logo" />
             </div>
             <div class="usa-footer__social-links grid-col-8 tablet:grid-col-12 grid-row grid-gap-1 display-flex flex-row flex-justify-end tablet:flex-justify-start">
@@ -851,7 +1117,7 @@ On June 22, 2025, Metro is updating bus service with changes designed to improve
     </div>
   </footer>
 <!---------------------- END FOOTER ----------------------><!-- Google Translate -->
-<script src="/mybus-v3-dev/assets/uswds/js/uswds.min.js"></script><!-- <script type="module" src="./js/typealhead.js"></script> -->
+<script src="/assets/uswds/js/uswds.min.js"></script><!-- <script type="module" src="./js/typealhead.js"></script> -->
 	</div>
 	<!-- Active Campaign tracking -->
 <script type="text/javascript">
