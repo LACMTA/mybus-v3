@@ -10,10 +10,6 @@ js-head:
 - '/js/site.js'
 
 mode: 'one-page'
-# message: 'Metro is making service changes to bus lines starting on Sunday, December 10, to provide riders with more reliable and predictable service. Get advanced notice of the upcoming improvements to your bus line.'
-
-# title: "Service Updates"
-# subtitle: "Coming December 10, 2023"
 ---
 
 {% case page.lang %}
@@ -48,58 +44,47 @@ mode: 'one-page'
 						{% comment %} <span class="subtitle font-sans-lg desktop:font-sans-xl">{{ subtitle }}</span> {% endcomment %}
 					</h1>
 
-					{% case mode %}
-						{%- comment -%} {% when 'one-page' %}
-							{% include 'index/one-page' %}
-						{% when 'all' %}
-							{% include 'index/all-changes' %}
-						{% when 'select' %}
-							{% include 'index/select-line' %}{%- endcomment -%}
-						{% when 'email-signup' %}
-							{% include 'index/email-signup' %}
+					<p>
+					{{ pageContent.page.introP1 }}
+					</p>
+
+
+					{% assign takeoneList = '' %}
+					{% for lang in langs.langList %}
+						{% capture takeoneLabel %}takeone_label_{{ lang }}{% endcapture %}
+						{% capture takeoneFile %}takeone_file_{{ lang }}{% endcapture %}
+						{% capture takeonePath %}/files/takeones/{{ pageContent.page[takeoneFile] }}{% endcapture %}
+
+						{% if pageContent.page[takeoneFile] == '' %}
+							{% continue %}
 						{% else %}
+							{% assign takeoneList = takeoneList | append: takeoneLabel | append: ':' | append: takeonePath | append: ',' %}
+						{% endif %}
+					{% endfor %}
+
+					{% if takeoneList != '' %}
 						<p>
-						{{ pageContent.page.introP1 }}
+						{{ pageContent.page.introP2 }}
 						</p>
 
-
-						{% assign takeoneList = '' %}
-						{% for lang in langs.langList %}
-							{% capture takeoneLabel %}takeone_label_{{ lang }}{% endcapture %}
-							{% capture takeoneFile %}takeone_file_{{ lang }}{% endcapture %}
-							{% capture takeonePath %}/files/takeones/{{ pageContent.page[takeoneFile] }}{% endcapture %}
-
-							{% if pageContent.page[takeoneFile] == '' %}
-								{% continue %}
-							{% else %}
-								{% assign takeoneList = takeoneList | append: takeoneLabel | append: ':' | append: takeonePath | append: ',' %}
-							{% endif %}
-						{% endfor %}
-
-						{% if takeoneList != '' %}
-							<p>
-							{{ pageContent.page.introP2 }}
-							</p>
-
-							<form class="usa-form" id="downloadTakeone">
-							<label class="usa-label" for="optionsTakeone" ></label>
-							<select class="usa-select" name="options" id="optionsTakeone">
-								<option value>{{ pageContent.page.selectLanguage }}</option>
-								{% for lang in langs.langList %}
-									{% capture takeoneLabel %}takeone_label_{{ lang }}{% endcapture %}
-									{% capture takeoneFile %}takeone_file_{{ lang }}{% endcapture %}
-									{% capture takeonePath %}/files/takeones/{{ pageContent.page[takeoneFile] }}{% endcapture %}
-									{% if pageContent.page[takeoneFile] == '' %}
-										{% continue %}
-									{% else %}
-										<option value="{{ takeonePath | url }}">{{ pageContent.page[takeoneLabel] }}</option>
-									{% endif %}
-								{% endfor %}
-							</select>
-							<button type="submit" class="usa-button takeone-download">{{ pageContent.page.download }}</button>
-							</form>
-						{% endif %}
-					{% endcase %} 
+						<form class="usa-form" id="downloadTakeone">
+						<label class="usa-label" for="optionsTakeone" ></label>
+						<select class="usa-select" name="options" id="optionsTakeone">
+							<option value>{{ pageContent.page.selectLanguage }}</option>
+							{% for lang in langs.langList %}
+								{% capture takeoneLabel %}takeone_label_{{ lang }}{% endcapture %}
+								{% capture takeoneFile %}takeone_file_{{ lang }}{% endcapture %}
+								{% capture takeonePath %}/files/takeones/{{ pageContent.page[takeoneFile] }}{% endcapture %}
+								{% if pageContent.page[takeoneFile] == '' %}
+									{% continue %}
+								{% else %}
+									<option value="{{ takeonePath | url }}">{{ pageContent.page[takeoneLabel] }}</option>
+								{% endif %}
+							{% endfor %}
+						</select>
+						<button type="submit" class="usa-button takeone-download">{{ pageContent.page.download }}</button>
+						</form>
+					{% endif %}
 
 				</div>
 			</div>

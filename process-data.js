@@ -3,7 +3,7 @@ console.log("Running process-data.js\n");
 const fs = require('fs');
 const papa = require('papaparse');
 
-const CURRENT_SHAKEUP_FOLDER = '2024-06';
+const CURRENT_SHAKEUP_FOLDER = '2025-06';
 
 const UPDATES_FILE = 'src/_data/' + CURRENT_SHAKEUP_FOLDER + '/updates.csv';
 const CONTENT_FILE = 'src/_data/' + CURRENT_SHAKEUP_FOLDER + '/content.csv';

@@ -5,17 +5,16 @@
   "main": "index.js",
   "scripts": {
     "rename": "node rename.js",
-    "fetch:data-updates": "curl -fsSL -o src/_data/2024-06/updates.csv https://docs.google.com/spreadsheets/d/1xD8wgDgACo2Ztklkku5GqBJT3Y6HP1iRPcRHPJxeJF4/export?format=csv&usp=sharing&gid=0",
-    "fetch:data-content": "curl -fsSL -o src/_data/2024-06/content.csv https://docs.google.com/spreadsheets/d/1FU6snTI6OiSzsLhcHzUGYGxZLs7UievI8jE_EFqdxLo/export?format=csv&usp=sharing&gid=2067994077",
-    "fetch:data-lines-bus": "curl -fsSL -o src/_data/2024-06/lines-bus.json https://api.metro.net/LACMTA/route_overview",
-    "fetch:data-lines-rail": "curl -fsSL -o src/_data/2024-06/lines-rail.json https://api.metro.net/LACMTA_Rail/route_overview",
+    "fetch:data-updates": "curl -fsSL -o src/_data/2025-06/updates.csv https://docs.google.com/spreadsheets/d/1dN9pgu1x61HiNAsSkp0nkx6xhZanXpzjP3HOtCSGTns/export?format=csv&usp=sharing&gid=0",
+    "fetch:data-content": "curl -fsSL -o src/_data/2025-06/content.csv https://docs.google.com/spreadsheets/d/1ii_AcbK-d32Be5j5UeR4IPdxZPkqyg5_EkY_AnHsWzM/export?format=csv&usp=sharing&gid=0",
+    "fetch:data-lines-bus": "curl -fsSL -o src/_data/2025-06/lines-bus.json https://api.metro.net/LACMTA/route_overview",
+    "fetch:data-lines-rail": "curl -fsSL -o src/_data/2025-06/lines-rail.json https://api.metro.net/LACMTA_Rail/route_overview",
     "fetch:data": "npm run fetch:data-updates && npm run fetch:data-content && npm run fetch:data-lines-bus && npm run fetch:data-lines-rail",
     "uswds:watch": "npx gulp watch",
     "clean": "npx rimraf docs",
     "build": "npx @11ty/eleventy",
     "clean:build": "npm run clean && npm run fetch:data && npm run parse:data && npm run build",
     "serve": "npx @11ty/eleventy --serve",
-    "process-data": "python3 process-data.py && node process-data.js",
     "parse:data": "node process-data.js",
     "clean:serve": "npm run clean:build && npm run serve",
     "local:serve": "NODE_ENV=localhost npm run clean:serve",
@@ -28,11 +27,11 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.0-canary.14",
-    "@uswds/uswds": "^3.10.0",
+    "@uswds/uswds": "^3.12.0",
     "eleventy-plugin-broken-links": "^2.0.3",
     "papaparse": "^5.4.1"
   },
   "devDependencies": {
-    "@uswds/compile": "^1.2.0"
+    "@uswds/compile": "^1.2.2"
   }
 }

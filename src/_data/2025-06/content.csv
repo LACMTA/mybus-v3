@@ -1,0 +1,38 @@
+field,en-content,es-content,hy-content,zh-tw-content,ko-content,ja-content,ru-content,vi-content
+pageTitle,Service Updates,Actualizaciones de servicio,,,,,,
+pageSubtitle,"New schedules beginning June 6, 2025 at 5pm.",Nuevos horarios a partir del 6 de junio de 2025 a las 5pm.,,,,,,
+introP1,"The new LAX/Metro Transit Center is set to open on June 6, 2025 at 5pm. Metro will be adjusting Bus Lines 102, 111, 117, 120, 232 and 40 (Owl) to better serve the C and K Lines, as well as the LAX/Metro Transit Center. 
+
+On June 22, 2025, Metro is updating bus service with changes designed to improve frequency, reliability and access for riders across the city. Check back for June 22 bus service changes details. ","El nueva estación LAX/Metro Transit Center abrirá el 6 de junio de 2025 a las 5pm. Metro ajustará las líneas de autobús 102, 111, 117, 120, 232 y 40 (Owl) para brindar un mejor servicio a las líneas C y K, así como al LAX/Metro Transit Center. 
+
+El 22 de junio de 2025, Metro actualizará el servicio de autobús con cambios diseñados para mejorar la frecuencia, la fiabilidad y el acceso para los pasajeros de toda la ciudad. Consulte nuevamente para obtener más información sobre los cambios en el servicio de autobús del 22 de junio.",,,,,,
+introP2,Download a PDF summary of the latest updates in:,Descargue un resumen en PDF de las últimas actualizaciones de servicios en los siguientes idiomas:,Ներբեռնեք ծառայության վերջին թարմացումների PDF ամփոփագիրը հետևյալ լեզուներով.,您可下載以下語言的最新服務更新PDF摘要：,다음 언어로 최신 서비스 업데이트의 PDF 요약본을 다운로드하세요.,最新のサービスアップデートの概要は、次の言語でPDFをダウンロードすることができます。,Загрузите PDF-сводку последних обновлений на таких языках:,Tải xuống bản tóm tắt ở định dạng PDF về các cập nhật dịch vụ mới nhất có sẵn bằng các ngôn ngữ sau:
+download,Download,Descargar,Բեռնել,下載,다운로드,ダウンロード,Скачать,Tải xuống
+lineListTitle,These lines have updates:,Las siguientes líneas de autobús cuentan con actualizaciones de servicio:,Այս ավտոբուսային գծերն ունեն սպասարկման թարմացումներ.,以下巴士路線有服務更新：,이 버스 노선에 다음과 같은 서비스 업데이트 사항이 있습니다.,サービスアップデートのあるバスライン：,На этих автобусных маршрутах обновлены расписания:,Những tuyến xe buýt sau đã được cập nhật dịch vụ:
+update,Update:,Actualización:,Թարմացում․,更新：,업데이트:,アップデート：,Обновление:,Cập nhật:
+reason,Reason:,Motivo:,Պատճառը․,原因：,사유:,理由：,Причина:,Lý do:
+schedule,New schedule,Nuevo horario,Նոր ժամանակացույց․,新的時刻表,신규 일정,新スケジュール,Новое расписание,Lịch trình mới
+map,See Map,Consultar mapa,Տե՛ս Քարտեզը,查看地圖,지도 보기,地図を見る,Посмотреть карту,Xem Bản Đồ
+privacy,Privacy Policy,Política de privacidad,Գաղտնիության քաղաքականություն,隱私權政策,개인정보 처리방침,プライバシーポリシー,Политика конфиденциальности,Chính Sách Quyền Riêng Tư
+terms,Terms of Use,Términos de uso,Օգտվելու կանոններ,使用條款,이용약관,利用規約,Условия использования,Điều Khoản Sử Dụng
+contact,Contact Us,Contáctenos,Կապ մեզ հետ,聯絡我們,문의,お問い合わせ,Связаться с нами,Liên Hệ Với Chúng Tôi
+showTranslateButton,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+translate,Translate,Traducir,Թարգմանել,翻譯,번역,翻訳,Перевести,Dịch
+top,Back to top,Volver al principio de esta página,Back to top,Back to top,Back to top,Back to top,Back to top,Back to top
+selectLanguage,Select Language,Seleccione el idioma,Ընտրել լեզուն,選擇語言,당신의 언어를 고르시 오,言語を選択する,Выберите язык,Chọn ngôn ngữ
+takeone_label_en,English,English,English,English,English,English,English,English
+takeone_label_es,Español (Spanish),Español (Spanish),Español (Spanish),Español (Spanish),Español (Spanish),Español (Spanish),Español (Spanish),Español (Spanish)
+takeone_label_hy,հայերեն (Armenian),հայերեն (Armenian),հայերեն (Armenian),հայերեն (Armenian),հայերեն (Armenian),հայերեն (Armenian),հայերեն (Armenian),հայերեն (Armenian)
+takeone_label_zh-tw,中文 (Chinese Traditional),中文 (Chinese Traditional),中文 (Chinese Traditional),中文 (Chinese Traditional),中文 (Chinese Traditional),中文 (Chinese Traditional),中文 (Chinese Traditional),中文 (Chinese Traditional)
+takeone_label_ko,한국어 (Korean),한국어 (Korean),한국어 (Korean),한국어 (Korean),한국어 (Korean),한국어 (Korean),한국어 (Korean),한국어 (Korean)
+takeone_label_ja,日本語 (Japanese),日本語 (Japanese),日本語 (Japanese),日本語 (Japanese),日本語 (Japanese),日本語 (Japanese),日本語 (Japanese),日本語 (Japanese)
+takeone_label_ru,русский (Russian),русский (Russian),русский (Russian),русский (Russian),русский (Russian),русский (Russian),русский (Russian),русский (Russian)
+takeone_label_vi,Tiếng Việt (Vietnamese),Tiếng Việt (Vietnamese),Tiếng Việt (Vietnamese),Tiếng Việt (Vietnamese),Tiếng Việt (Vietnamese),Tiếng Việt (Vietnamese),Tiếng Việt (Vietnamese),Tiếng Việt (Vietnamese)
+takeone_file_en,,,,,,,,
+takeone_file_es,,,,,,,,
+takeone_file_hy,,,,,,,,
+takeone_file_zh-tw,,,,,,,,
+takeone_file_ko,,,,,,,,
+takeone_file_ja,,,,,,,,
+takeone_file_ru,,,,,,,,
+takeone_file_vi,,,,,,,,

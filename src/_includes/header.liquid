@@ -9,7 +9,9 @@
 			</div>
 		</div>
 
-		{% if pageContent.page.show_translate_button == "TRUE" %}
+		<!-- Temporarily limiting translation dropdown to English and Spanish -->
+		{% if page.lang == 'en' or page.lang == 'es' %}
+
 			<div class="usa-language-container usa-language--small">
 				<ul class="usa-language__primary usa-accordion">
 					<li class="usa-language__primary-item">
@@ -21,14 +23,20 @@
 						<ul id="language-options" class="usa-language__submenu" hidden="true">
 							{% assign links = page.url | locale_links %}
 							{% for lang in langs.langList %}
-								{% for link in links %}
-									{% if link.lang == lang %}
-									<li class="usa-language__submenu-item">
-									<a href="{{ link.url | url }}" class="lang-selector lang-{{ lang }}"><span>{{ langs[lang].label }}</span></a>
-									</li>
-									{% endif %}
-								{% endfor %}
+
+								<!-- Temporarily limiting translation dropdown to English and Spanish -->
+								{% if lang == 'en' or lang == 'es' %}
 								
+									{% for link in links %}
+										{% if link.lang == lang %}
+										<li class="usa-language__submenu-item">
+										<a href="{{ link.url | url }}" class="lang-selector lang-{{ lang }}"><span>{{ langs[lang].label }}</span></a>
+										</li>
+										{% endif %}
+									{% endfor %}
+
+								{% endif %}
+
 							{% endfor %}
 						</ul>
 					</li>
