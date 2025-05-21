@@ -121,6 +121,12 @@ Where `path` is the path to the resource under the `src` folder. It needs a lead
 /img/articulated-buses-mobile.png
 ```
 
+## Development Environment
+
+Start in the `mybus-v3` repository and create a new branch for the shakeup, ex. `december-2024-shakeup`.  Make a change and push it to the `mybus-v3-dev` repository using the command `git push dev` and then update the GitHub Pages setting to point to deploy from this branch.
+
+
+
 ## Updates
 
 ### Schedule PDF File Name Normalization

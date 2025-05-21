@@ -5,11 +5,9 @@
 # It will copy the CNAME file to the docs/ folder if necessary, then it will commit and push
 # these changes back to the repository.
 
-name: Build 11ty site for Dev
+name: Build for Dev
 
 on:
-  schedule:
-    - cron: '0 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -37,15 +35,15 @@ jobs:
       run: npx gulp compile
     - name: Build Site
       run: npm run dev:build
-    - name: Check file existence
-      id: check_files
-      uses: andstor/file-existence-action@v1
-      with:
-        files: "CNAME"
-    - name: If CNAME exists then copy CNAME to docs/
-      if: steps.check_files.outputs.files_exists == 'true'
-      run: cp CNAME docs/
+    # - name: Check file existence
+    #   id: check_files
+    #   uses: andstor/file-existence-action@v1
+    #   with:
+    #     files: "CNAME"
+    # - name: If CNAME exists then copy CNAME to docs/
+    #   if: steps.check_files.outputs.files_exists == 'true'
+    #   run: cp CNAME docs/
     - name: Commit and push changes
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: '[Auto] clean and build site for prod'
+        commit_message: '[Auto] clean and build site for dev'
