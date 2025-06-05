@@ -10,7 +10,7 @@
 		</div>
 
 		<!-- Temporarily limiting translation dropdown to English and Spanish -->
-		{% if page.lang == 'en' or page.lang == 'es' %}
+		{% comment %} {% if page.lang == 'en' or page.lang == 'es' %} {% endcomment %}
 
 			<div class="usa-language-container usa-language--small">
 				<ul class="usa-language__primary usa-accordion">
@@ -25,7 +25,7 @@
 							{% for lang in langs.langList %}
 
 								<!-- Temporarily limiting translation dropdown to English and Spanish -->
-								{% if lang == 'en' or lang == 'es' %}
+								{% comment %} {% if lang == 'en' or lang == 'es' %} {% endcomment %}
 								
 									{% for link in links %}
 										{% if link.lang == lang %}
@@ -35,14 +35,14 @@
 										{% endif %}
 									{% endfor %}
 
-								{% endif %}
+								{% comment %} {% endif %} {% endcomment %}
 
 							{% endfor %}
 						</ul>
 					</li>
 				</ul>
 			</div>
-		{% endif %}
+		{% comment %} {% endif %} {% endcomment %}
 	</div>
 </header>
 <!---------------------- END HEADER ---------------------->
