@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "rename": "node rename.js",
-    "fetch:data-updates": "curl -fsSL -o src/_data/2025-06/updates.csv https://docs.google.com/spreadsheets/d/1dN9pgu1x61HiNAsSkp0nkx6xhZanXpzjP3HOtCSGTns/export?format=csv&usp=sharing&gid=0",
-    "fetch:data-content": "curl -fsSL -o src/_data/2025-06/content.csv https://docs.google.com/spreadsheets/d/1ii_AcbK-d32Be5j5UeR4IPdxZPkqyg5_EkY_AnHsWzM/export?format=csv&usp=sharing&gid=0",
+    "fetch:data-updates": "curl -fsSL -o src/_data/2025-12/updates.csv https://docs.google.com/spreadsheets/d/1nbBVN5qT5T1ldzKT1b-VUJEaGPzGatH3-0ZBmwf5EYA/export?format=csv&usp=sharing&gid=0",
+    "fetch:data-content": "curl -fsSL -o src/_data/2025-12/content.csv https://docs.google.com/spreadsheets/d/17rmSC2EwkP-P6ol__YtTSzztLjwG0u7lnhcFiPUJ7YY/export?format=csv&usp=sharing&gid=0",
     "fetch:data": "npm run fetch:data-updates && npm run fetch:data-content",
     "uswds:watch": "npx gulp watch",
     "clean": "npx rimraf docs",
