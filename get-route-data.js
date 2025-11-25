@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const csv = require("csv");
+const fetch = require("node-fetch");
 
 // Configuration
 const CSV_URL =

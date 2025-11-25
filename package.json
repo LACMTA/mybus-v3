@@ -29,6 +29,7 @@
     "@uswds/uswds": "^3.13.0",
     "csv": "^6.4.1",
     "eleventy-plugin-broken-links": "^2.0.3",
+    "node-fetch": "^2.7.0",
     "papaparse": "^5.4.1"
   },
   "devDependencies": {
