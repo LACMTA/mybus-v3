@@ -208,3 +208,14 @@ npm run start
 #### Using Includes
 
 To use includes without quotes, they need to be enabled via `dynamicPartials: false` in the Liquid options. Front matter in the include file will not be evaluated. By default, includes must be formatted this way: `{% include 'user' %}`, which looks for `_includes/user.liquid`.
+
+## Route Overview file
+
+A match is made between the route as listed in the Google Sheet and the route as listed in the `route_overview.csv` file based off whether the line matches one of these three in order:
+
+* route_code
+* route_short_name
+* route_id
+
+If they exist, `terminal_1` and `terminal_2` values are used to build the route description.  Otherwise, the route description is set to the `long_name` value.
+

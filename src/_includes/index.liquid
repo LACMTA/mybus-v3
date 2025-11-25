@@ -179,7 +179,7 @@ mode: 'one-page'
 									</div>
 									<div class="grid-col change-description">
 										<h2 class="line-description margin-top-2 margin-bottom-0">{{ lineUpdate.description }}
-											{% if lineUpdate.arterials != null %}
+											{% if lineUpdate.arterials != null and lineUpdate.arterials != '' %}
 												<br><small>via {{ lineUpdate.arterials }}</small>
 											{% endif %}
 										</h2>
@@ -258,7 +258,7 @@ mode: 'one-page'
 									</div>
 									<div class="grid-col change-description margin-left-2">
 										<h2 class="line-description margin-y-0">{{ lineUpdate.description }} 
-											{% if lineUpdate.arterials != null %}
+											{% if lineUpdate.arterials != null and lineUpdate.arterials != '' %}
 												<small>via {{ lineUpdate.arterials  }}</small>
 											{% endif %}
 										</h2>

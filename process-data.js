@@ -128,10 +128,11 @@ papa.parse(rs_updates_file, {
                     let lineData = linesData.find(lineData => lineData['route_code'] === line || lineData['route_short_name'] === line || lineData['route_id'] === line);
                     
                     if (lineData) {
-                        if (lineData['terminal_1'] != null && lineData['terminal_2'] != null) {
+                        if (lineData['terminal_1'] != null && lineData['terminal_1'] != '' && lineData['terminal_2'] != null && lineData['terminal_2'] != '') {
                             update['description'] = `${lineData['terminal_1']} - ${lineData['terminal_2']}`;
                         } else {
-                            console.log('No terminal data found for line:', line);
+                            console.log('No terminal data found for line: ', line);
+                            console.log('Setting description to: ', lineData['long_name']);
                             update['description'] = lineData['long_name'];
                         }
                         
