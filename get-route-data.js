@@ -6,7 +6,7 @@ const fetch = require("node-fetch");
 // Configuration
 const CSV_URL =
   "https://raw.githubusercontent.com/LACMTA/los-angeles-regional-gtfs/refs/heads/main/.scripts/route_overview.csv";
-const OUTPUT_DIR = "src/_data/2025-12";
+const OUTPUT_DIR = "src/_data/2026-06";
 const RAIL_OUTPUT = path.join(OUTPUT_DIR, "lines-rail.json");
 const BUS_OUTPUT = path.join(OUTPUT_DIR, "lines-bus.json");
 
