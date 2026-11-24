@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "rename": "node rename.js",
-    "fetch:data-updates": "curl -fsSL -o src/_data/2026-06/updates.csv https://docs.google.com/spreadsheets/d/1sqGXAbVI1lUYB20-arn8bZvyyz2L7qUwJK9bfS3mnHY/export?format=csv&usp=sharing&gid=0",
-    "fetch:data-content": "curl -fsSL -o src/_data/2026-06/content.csv https://docs.google.com/spreadsheets/d/1TP8tpe3hKwSVtW_Gm6shgqQlwPjJ453p7VnmE_FfzD8/export?format=csv&usp=sharing&gid=0",
-    "fetch:data-lines": "node get-route-data.js",
+    "fetch:data-updates": "curl -fsSL -o src/_data/2026-12/updates.csv https://docs.google.com/spreadsheets/d/1OqOVq84_9QQx2oMOipBmFRl7OKJyzL2Ugz4RGlJEd2M/export?format=csv&usp=sharing&gid=0",
+    "fetch:data-content": "curl -fsSL -o src/_data/2026-12/content.csv https://docs.google.com/spreadsheets/d/14X6W3BsruufPB8cDt6ZNMLoi3_tq94Ems_Fr9ZW9WfY/export?format=csv&usp=sharing&gid=0",
+    "fetch:data-lines": "node get-route-data.js || echo 'Warning: get-route-data.js failed; continuing build without updated lines data.'",
     "fetch:data": "npm run fetch:data-updates && npm run fetch:data-content && npm run fetch:data-lines",
     "uswds:watch": "npx gulp watch",
     "clean": "npx rimraf docs",
