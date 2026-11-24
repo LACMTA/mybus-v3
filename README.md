@@ -23,7 +23,7 @@ https://docs.google.com/spreadsheets/d/{ sheet_id }/export?format=csv&usp=sharin
 Create a new folder in `_data` for the new data files and update the file output paths in `package.json`:
 
 ```
-src/_data/{ yyyy-mm}/updates.csv
+src/_data/{yyyy-mm}/updates.csv
 ```
 
 Update some of the rows in the content sheet.
